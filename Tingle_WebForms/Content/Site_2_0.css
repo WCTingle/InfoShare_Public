@@ -1,0 +1,1113 @@
+﻿html {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ffffff;
+    border-top: solid 15px #bb4342;
+    color: #333;
+    font-size: .85em;
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+
+a, a:visited {
+    color: #bb4342;
+    outline: none;
+    padding-left: 3px;
+    padding-right: 3px;
+    text-decoration: underline;
+}
+
+header, footer, hgroup, nav, section {
+    display: block;
+}
+
+mark {
+    background-color: #a6dbed;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #000;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.75em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.clear-fix:after {
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+
+/*-----------------------------------------main layout---------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------*/
+
+.content-wrapper {
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+#body {
+    background-color: #FFFFFF;
+    clear: both;
+    padding-bottom: 35px;
+}
+
+.main-content {
+    padding-top: 20px;
+    min-height: 400px;
+    padding-bottom:35px;
+}
+
+header {
+}
+
+footer {
+    clear: both;
+    background-color: #bb4342;
+    font-size: 12px;
+    height: 96px;
+    text-align: center;
+    padding-top: 40px;
+    color: white;
+}
+
+
+/*---------------------------------------site title------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------*/
+.site-title {
+    color: #c8c8c8;
+    font-family: Arial;
+    font-size: 2.3em;
+    margin: 0;
+}
+
+    .site-title a, .site-title a:hover, .site-title a:active {
+        background: none;
+        color: #c8c8c8;
+        outline: none;
+        text-decoration: none;
+    }
+
+
+/*-----------------------------------------------login---------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------*/
+#login {
+    display: block;
+    font-size: .85em;
+    margin: 0 0 10px;
+    text-align: right;
+}
+
+    #login a {
+        background-color: #d3dce0;
+        margin-left: 10px;
+        margin-right: 3px;
+        padding: 2px 3px;
+        text-decoration: none;
+    }
+
+        #login a.username {
+            background: none;
+            margin-left: 0px;
+            text-decoration: underline;
+        }
+
+    #login ul {
+        margin: 0;
+    }
+
+    #login li {
+        display: inline;
+        list-style: none;
+    }
+
+
+/*----------------------------------------------MENU-----------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------*/
+
+ul#menu {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin: 0 0 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    text-align: right;
+    background-color: #bb4342;
+    text-align: center;
+    padding-top: 5px;
+}
+
+    ul#menu li {
+        display: inline;
+        list-style: none;
+        padding: 15px;
+    }
+
+        ul#menu li a {
+            background: none;
+            color: #FFF;
+            text-decoration: none;
+        }
+
+            ul#menu li a:hover {
+                color: #c8c8c8;
+                text-decoration: none;
+            }
+
+
+/*-------------------------------------info and errors---------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------*/
+
+.message-info {
+    border: 1px solid;
+    clear: both;
+    padding: 10px 20px;
+}
+
+.message-error {
+    clear: both;
+    color: #e80c4d;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 20px 0 10px 0;
+}
+
+.message-success {
+    color: #7ac0da;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 20px 0 10px 0;
+}
+
+.error {
+    color: #e80c4d;
+}
+
+
+/*----------------------------------styles for validation helpers----------------------------------*/
+/*-------------------------------------------------------------------------------------------------*/
+
+.field-validation-error {
+    color: #e80c4d;
+    font-weight: bold;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #e80c4d;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #e80c4d;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+
+/*----------------------------------------Mobile Styles--------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------*/
+
+@media only screen and (max-width: 850px) {
+
+    /* header */
+    header .float-left, header .float-right {
+        float: none;
+    }
+
+    /* logo */
+    header .site-title {
+        margin: 10px;
+        text-align: center;
+    }
+
+    /* login */
+    #login {
+        font-size: .85em;
+        margin: 0 0 12px;
+        text-align: center;
+    }
+
+        #login ul {
+            margin: 5px 0;
+            padding: 0;
+        }
+
+        #login li {
+            display: inline;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #login a {
+            background: none;
+            color: #999;
+            font-weight: 600;
+            margin: 2px;
+            padding: 0;
+        }
+
+            #login a:hover {
+                color: #333;
+            }
+
+    /* menu */
+    nav {
+        margin-bottom: 5px;
+    }
+
+    ul#menu {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+        ul#menu li {
+            margin: 0;
+            padding: 0;
+        }
+
+    /*main layout*/
+    .main-content,
+    .featured + .main-content {
+        background-position: 10px 0;
+    }
+
+    .content-wrapper {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .featured .content-wrapper {
+        padding: 10px;
+    }
+
+    /* page content */
+    article, aside {
+        float: none;
+        width: 100%;
+    }
+
+    /* login page */
+    #loginForm {
+        border-right: none;
+        float: none;
+        width: auto;
+    }
+
+        #loginForm .validation-error {
+            display: block;
+            margin-left: 15px;
+        }
+
+    #socialLoginForm {
+        margin-left: 0;
+        float: none;
+        width: auto;
+    }
+
+    /* footer
+    ----------------------------------------------------------*/
+    footer .float-left, footer .float-right {
+        float: none;
+    }
+
+    footer {
+        text-align: center;
+        height: auto;
+        padding: 10px 0;
+    }
+
+        footer p {
+            margin: 0;
+        }
+}
+/* END: Mobile Styles */
+
+/*-------------------------------------------NEW--------------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
+
+#MainContent_dvReport {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#MainContent_lblMessage {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#MainContent_ddlForm {
+    background-color: #d0614e;
+    color: #FFF;
+    font-size: 24px;
+    border: 2px solid #bc4445;
+}
+
+table {
+    border: 4px solid #d0604c;
+    width: 100%;
+}
+
+td {
+    width: 25%;
+    text-align: center;
+}
+
+.standardTd
+{
+    width: 25%;
+    text-align: center;
+}
+
+.tdheader {
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 20px;
+    border: 4px solid #d0604c;
+    background-color: #bc4445;
+    color: #FFF;
+}
+
+.tdright {
+    text-align: right;
+    font-size: 14px;
+    font-weight: bold;
+    color: #bc4445;
+    padding: 10px;
+    vertical-align:middle;
+}
+
+.tdleft {
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    color: #bc4445;
+    padding: 10px 30px 10px 10px;
+    vertical-align:middle;
+}
+
+.tdcenter {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #bc4445;
+    padding: 10px;
+    vertical-align:middle;
+}
+
+.tdsectionheader {
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    border: 4px solid #d0604c;
+    color: white;
+    background-color: #bc4445;
+}
+
+.tdcenter {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.divcenter {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.reportrow {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 14px;
+    border-bottom: 4px solid #d0604c;
+}
+
+.reportButton {
+    background-color: #bb4342;
+    height: 150px;
+    width: 150px;
+    font-size: 18pt;
+    color: #000;
+    text-align: center;
+    border: 3px outset #FFF;
+}
+
+.formButton {
+    background-color: #bb4342;
+    height: 150px;
+    width: 150px;
+    font-size: 12pt;
+    color: #FFF;
+    text-align: center;
+    border: 3px outset #FFF;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.normalButton {
+    background-color: #d0614e !important;
+    border: 3px solid #FFF !important;
+    padding: 7px !important;
+    color: #000 !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    border-radius: 9px !important;
+    border: 1px solid black !important;
+    text-decoration:none !important;
+}
+
+    .normalButton:hover {
+        background-color: #d0614e !important;
+        border: 3px solid #FFF !important;
+        padding: 7px !important;
+        color: #FFF !important;
+        font-weight: 600 !important;
+        font-size: 14px !important;
+        border-radius: 14px !important;
+        border: 1px solid white !important;
+        cursor: pointer !important;
+        text-decoration:none !important;
+    }
+
+.detailValues {
+    color: #000;
+}
+
+.smallText {
+    font-size: 12px;
+    color: #d0614e;
+}
+
+.valErrors {
+    text-align: center;
+}
+
+.largeFont {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+input[type="text"] {
+    width: 250px;
+    font-size: 14px;
+    padding: 5px;
+}
+
+
+.EmailLabels {
+    color: #000;
+}
+
+.EmailValues {
+    color: #bc4445;
+}
+
+div.FormButton {
+    position: relative;
+    background-color: #bb4342;
+    height: 150px;
+    width: 150px;
+    font-size: 12pt;
+    color: #FFF;
+    text-align: center;
+    border: 3px outset #FFF;
+    border-radius: 8px;
+    margin: 10px;
+    vertical-align: middle;
+    float: left;
+}
+
+    div.FormButton a {
+        position: absolute;
+        width: 100%;
+        height: 90%;
+        top: 10%;
+        left: 0;
+        text-decoration: none;
+        z-index: 10;
+        background-color: #FFF; /* Fix to make div clickable in IE */
+        opacity: 0; /* Fix to make div clickable in IE */
+        filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+    }
+
+.FormButtonText {
+    margin-top: 33%;
+    width: 100%;
+    z-index: 1;
+}
+
+.FavFormButtonText {
+    margin-top: 43%;
+    width: 100%;
+    z-index: 1;
+}
+
+.FormButtonText2 {
+    margin-top: 27%;
+    width: 100%;
+    z-index: 1;
+}
+
+.FavFormButtonText2 {
+    margin-top: 38%;
+    width: 100%;
+    z-index: 1;
+}
+
+.FormButtonText4 {
+    margin-top: 43%;
+    width: 100%;
+    z-index: 1;
+}
+
+.FavFormButtonText4 {
+    margin-top: 43%;
+    width: 100%;
+    z-index: 1;
+}
+
+
+.FavoriteCheckBox {
+    z-index: 20;
+}
+
+.formButtonCBDiv {
+    text-align: right;
+    z-index: 20;
+    width: 100%;
+    height: 10%;
+    position: relative;
+}
+
+#accordion .ui-accordion-header,
+#accordion2 .ui-accordion-header,
+#accordion3 .ui-accordion-header,
+#accordion4 .ui-accordion-header,
+#accordion5 .ui-accordion-header {
+    text-align: left;
+}
+
+#accordion .ui-accordion-content,
+#accordion2 .ui-accordion-content,
+#accordion3 .ui-accordion-content,
+#accordion4 .ui-accordion-content,
+#accordion5 .ui-accordion-content {
+    padding-top: 5px;
+}
+
+
+.LinkButtonFav {
+    color: #bb4342;
+    outline: medium none;
+    padding-left: 3px;
+    padding-right: 3px;
+    text-decoration: underline;
+}
+
+    .LinkButtonFav:hover {
+        color: #000;
+        outline: medium none;
+        padding-left: 3px;
+        padding-right: 3px;
+        text-decoration: underline;
+    }
+
+
+.tdcenterSmall {
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+    padding: 5px;
+}
+
+.ReportLinkButton {
+    color: #bb4342;
+    outline: medium none;
+}
+
+    .ReportLinkButton:hover {
+        color: #000;
+        outline: medium none;
+    }
+
+
+.DivReportLinkButton {
+    width:25%;
+    float:left;
+    padding-top:10px;
+}
+
+
+
+
+.formRedText
+{
+    font-size: 14px;
+    font-weight: bold;
+    color: #bc4445;
+    padding: 10px;
+}
+
+
+.RadComboBoxDropDown .rcbItem > label,
+.RadComboBoxDropDown .rcbHovered > label,
+.RadComboBoxDropDown .rcbDisabled > label,
+.RadComboBoxDropDown .rcbLoading > label,
+.RadComboBoxDropDown .rcbCheckAllItems > label,
+.RadComboBoxDropDown .rcbCheckAllItemsHovered > label
+{
+    display:inline !important;
+}
+
+.RadComboBox .rcbArrowCell a 
+{
+    width:12px !important;
+}
+
+.plusSignImageBtn
+{
+    background: url(../Images/plussign.png) !important;
+    background-position: 0 0 !important;
+    width: 26px !important;
+    height: 26px !important;
+    vertical-align:middle !important;
+    text-decoration:none;
+}
+
+.editImageBtn
+{
+    background: url(../Images/editpencil.jpg) !important;
+    background-position: 0 0 !important;
+    width: 15px !important;
+    height: 15px !important;
+    vertical-align:middle !important;
+}
+
+.saveImageBtn
+{
+    background: url(../Images/saveicon.png) !important;
+    background-position: 0 0 !important;
+    width: 15px !important;
+    height: 15px !important;
+    vertical-align:middle !important;
+}
+
+.cancelImageBtn
+{
+    background: url(../Images/cancelicon.png) !important;
+    background-position: 0 0 !important;
+    width: 15px !important;
+    height: 15px !important;
+    vertical-align:middle !important;
+}
+
+
+#loadingDiv
+{
+    position:fixed;
+    top:0px;
+    left:0px;
+    min-height:100%;
+    width:100%;
+    z-index:999;
+    opacity:.80;
+    background-color:#181818;
+    display:none;
+}
+
+.loadingDiv
+{
+    position:fixed !important;
+    top:0px !important;
+    left:0px !important;
+    min-height:100% !important;
+    width:100% !important;
+    z-index:999 !important;
+    opacity:.80 !important;
+    background-color:#181818 !important;
+    padding:0 !important;
+}
+
+#loadingGif{
+     position:fixed;
+     width:123px;
+     height:123px;
+     z-index:999;
+     top:50%;
+     left:50%;
+     margin:-61px 0 0 -61px;
+     background-color:#181818;
+     opacity:.80;
+     display:none;
+}
+
+#gvSkus
+{
+    margin:0 auto !important;
+}
+
+
+.rtWrapper 
+{
+    border:none !important;
+}
+
+.RadToolTip_Default .rtWrapper .rtWrapperLeftMiddle, 
+.RadToolTip_Default .rtWrapper .rtWrapperRightMiddle, 
+.RadToolTip_Default table.rtShadow .rtWrapperLeftMiddle, 
+.RadToolTip_Default table.rtShadow .rtWrapperRightMiddle 
+{
+    background:none !important;
+    background-color:#FFF !important;
+    width:0px !important;
+
+}
+
+
+.RadToolTip .rtWrapper td.rtWrapperContent
+{
+    width:100% !important;
+}
+
+.RadToolTip_Default .rtWrapper .rtWrapperTopLeft, 
+.RadToolTip_Default .rtWrapper .rtWrapperTopRight, 
+.RadToolTip_Default .rtWrapper .rtWrapperBottomLeft, 
+.RadToolTip_Default .rtWrapper .rtWrapperBottomRight, 
+.RadToolTip_Default .rtWrapper .rtWrapperTopCenter, 
+.RadToolTip_Default .rtWrapper .rtWrapperBottomCenter, 
+.RadToolTip_Default table.rtShadow .rtWrapperTopLeft, 
+.RadToolTip_Default table.rtShadow .rtWrapperTopRight, 
+.RadToolTip_Default table.rtShadow .rtWrapperBottomLeft, 
+.RadToolTip_Default table.rtShadow .rtWrapperBottomRight,
+ .RadToolTip_Default table.rtShadow .rtWrapperTopCenter, 
+.RadToolTip_Default table.rtShadow .rtWrapperBottomCenter, 
+.RadToolTip_Default .rtCloseButton
+{
+    background:none !important;
+}
+
+.RadToolTip_Default .rtCallout
+{
+    background:none !important;
+}
+
+
+
+.iaSummaryDiv {
+    background-color: #bb4342;
+    height: 150px;
+    width: 150px;
+    font-size: 12pt;
+    color: #FFF;
+    text-align: center;
+    border: 3px outset #FFF;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+div.iaSummaryDiv {
+    position: relative;
+    background-color: #bb4342;
+    height: 150px;
+    width: 150px;
+    font-size: 12pt;
+    color: #FFF;
+    text-align: center;
+    border: 3px outset #FFF;
+    border-radius: 8px;
+    margin: 10px;
+    vertical-align: middle;
+    float: left;
+}
+
+    div.iaSummaryDiv a {
+        position: absolute;
+        width: 100%;
+        height: 90%;
+        top: 10%;
+        left: 0;
+        text-decoration: none;
+        z-index: 10;
+        background-color: #FFF; /* Fix to make div clickable in IE */
+        opacity: 0; /* Fix to make div clickable in IE */
+        filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+    }
+
+.iaSummaryDiv_Header {
+    text-align: center;
+    z-index: 20;
+    width: 100%;
+    height: 15px;
+    top:0px;
+
+}
+
+.iaSummaryDiv_Text {
+    margin-top: 5%;
+    width: 100%;
+    z-index: 1;
+    text-decoration:underline;
+}
+
+.iaSummaryDiv_Bottom {
+    text-align: center;
+    z-index: 20;
+    width: 100%;
+    height: 135px;
+
+}
+
+.RadWindow_Default a.rwIcon
+{
+    background: none !important;
+}
+
+.RadWindow_Default .rwBodyLeft, .RadWindow_Default .rwBodyRight, .RadWindow_Default .rwStatusbarRow .rwCorner 
+{
+    background: none !important;
+}
+
+.RadWindow_Default .rwTopLeft, .RadWindow_Default .rwTopRight, .RadWindow_Default .rwTitlebar, .RadWindow_Default .rwFooterLeft, .RadWindow_Default .rwFooterRight, .RadWindow_Default .rwFooterCenter, .RadWindow_Default .rwTopResize, .RadWindow_Default .rwStatusbar div, .RadWindow_Default .rwStatusbar, .RadWindow_Default .rwPopupButton, .RadWindow_Default .rwPopupButton span, .RadWindow_Default.rwMinimizedWindow .rwCorner 
+{
+    background: none !important;
+}
+
+
+.RadGrid .rgMasterTable, .RadGrid .rgDetailTable, .RadGrid .rgEditForm table 
+{
+    border:none !important;
+}
+
+.RadGrid_Default .rgMasterTable, .RadGrid_Default .rgDetailTable, .RadGrid_Default .rgGroupPanel table, .RadGrid_Default .rgCommandRow table, .RadGrid_Default .rgEditForm table, .RadGrid_Default .rgPager table {
+    border: none !important;
+}
+
+.RadGrid_Default .rgCommandTable td
+{
+    text-align:center !important;
+}
+
+
+.RadGrid_Default td.rgPagerCell
+{
+    width:100% !important; 
+}
+
+.rgDataDiv
+{
+    height:auto !important;
+}
+
+.RadGrid .rgBatchContainer {
+    max-width: 99% !important;
+}
+
+.button-approve-empty, .button-approve-checked
+{
+    background-position: 0 0 !important;
+    width: 25px !important;
+    height: 25px !important;
+    vertical-align:middle !important;
+    text-decoration:none;
+}
+
+.button-approve-empty
+{
+    background: Url(../Images/approve-empty.png) !important;
+}
+
+.button-approve-checked
+{
+    background: Url(../Images/approve-image.png) !important;
+}
+
+.RadGrid
+{
+   border-radius: 10px;
+   overflow: hidden;
+}
+
+.Grid-Total-Label
+{
+    font-weight:bold;
+    font-size:10px;
+    padding-right:5px;
+}
+
+.AdminGridSmall
+{
+    margin: 0 auto !important;
+}
+
+.in-the-last
+{
+    font-weight: bold; 
+    text-decoration: underline;
+}
+
+.rgEditForm {
+    margin: 0 auto !important;
+    width: 960px !important;
+    margin-left: -50px !important;
+    top:0px !important;
+}
+ 
+* + html .rgEditForm.popUpEditForm {
+    margin: 0 auto !important;
+    width: 960px !important;
+    top:0px !important;
+    margin-left: -50px !important;
+}
+ 
+.rgEditForm > div + div,
+.RadGrid .rgEditForm {
+    height: auto !important;
+}
+ 
+.rgEditForm > div > table{
+    height: 100%;
+     
+}
+ 
+.rgEditForm > div > table > tbody > tr > td {
+    padding: 4px 10px;
+}
+
+.rgHeader{
+    
+}
+
+.date-picker
+{
+    width: 250px !important;
+    font-size:14px !important;
+    height:28px !important;
+    text-align:left !important;
+    vertical-align:middle !important;
+}
+
+.date-picker-wrapper
+{
+    width: 250px !important;
+    font-size:14px !important;
+    height:28px !important;
+    text-align:left !important;
+    vertical-align:middle !important;
+}
+
+.date-picker-small
+{
+    width: 100px !important;
+    font-size:14px !important;
+    height:28px !important;
+    text-align:left !important;
+    vertical-align:middle !important;
+}
+
+.date-picker-small-wrapper
+{
+    width: 100px !important;
+    font-size:14px !important;
+    height:28px !important;
+    text-align:left !important;
+    vertical-align:middle !important;
+}
+
+.new-comment
+{
+    width: 81% !important;
+    height:60px !important;
+    vertical-align:middle !important;
+    display:inherit !important;
+    text-align: left !important;
+    margin: 0 auto !important; 
+    padding: 3px !important; 
+    border: 1px solid black !important;
+}
+
+.new-comment-wrapper
+{
+    width:100% !important;
+    height:60px !important;
+    margin: 0 auto !important; 
+    text-align: center !important;
+}
+
+html body .RadInput_Default .riTextBox, html body .RadInputMgr_Default {
+    border-color: #8e8e8e #b8b8b8 #b8b8b8 #8e8e8e;
+    background: #fff;
+    color: #333;
+    font: 12px "segoe ui",arial,sans-serif;
+    border-radius: 5px !important;
+    padding-left: 5px !important;
+    border: 2px inset !important;
+}
+
+.report-textbox-normal
+{
+    border-radius: 5px !important;
+    padding-left: 5px !important;
+    border: 2px inset !important;
+    width: 250px !important;
+    font-size: 14px !important;
+    height: 28px !important;
+    text-align: left !important;
+    vertical-align: middle !important;
+}
+
+.RadComboBox_Default .rcbEmptyMessage, .RadComboBox_Default .rcbFocused .rcbInput, .RadComboBox_Default .rcbInput
+{
+    border:none !important;
+}
+
+.rad-ajax-loading-panel
+{
+
+}

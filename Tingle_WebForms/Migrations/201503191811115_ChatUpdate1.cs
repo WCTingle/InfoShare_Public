@@ -1,0 +1,156 @@
+namespace Tingle_WebForms.Migrations
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
+    public partial class ChatUpdate1 : DbMigration
+    {
+        public override void Up()
+        {
+            CreateIndex("dbo.Comments", "Form_FormID");
+            CreateIndex("dbo.Comments", "User_SystemUserID");
+            CreateIndex("dbo.SystemUsers", "UserRole_UserRoleId");
+            CreateIndex("dbo.DirectOrderForms", "AssignedUser_SystemUserID");
+            CreateIndex("dbo.DirectOrderForms", "ExpediteCode_ExpediteCodeID");
+            CreateIndex("dbo.DirectOrderForms", "LastModifiedUser_SystemUserID");
+            CreateIndex("dbo.DirectOrderForms", "Priority_RecordId");
+            CreateIndex("dbo.DirectOrderForms", "RequestedUser_SystemUserID");
+            CreateIndex("dbo.DirectOrderForms", "Status_StatusId");
+            CreateIndex("dbo.DirectOrderForms", "SubmittedUser_SystemUserID");
+            CreateIndex("dbo.SkuQuantities", "DirectOrderForm_RecordId");
+            CreateIndex("dbo.SkuQuantities", "ExpeditedOrderForm_RecordId");
+            CreateIndex("dbo.ExpeditedOrderForms", "AssignedUser_SystemUserID");
+            CreateIndex("dbo.ExpeditedOrderForms", "ExpediteCode_ExpediteCodeID");
+            CreateIndex("dbo.ExpeditedOrderForms", "LastModifiedUser_SystemUserID");
+            CreateIndex("dbo.ExpeditedOrderForms", "Priority_RecordId");
+            CreateIndex("dbo.ExpeditedOrderForms", "RequestedUser_SystemUserID");
+            CreateIndex("dbo.ExpeditedOrderForms", "Status_StatusId");
+            CreateIndex("dbo.ExpeditedOrderForms", "SubmittedUser_SystemUserID");
+            CreateIndex("dbo.EmailAddresses", "TForm_FormID");
+            CreateIndex("dbo.FavoriteForms", "Form_FormID");
+            CreateIndex("dbo.FavoriteForms", "User_SystemUserID");
+            CreateIndex("dbo.FormPermissions", "UserRole_UserRoleId");
+            CreateIndex("dbo.HotRushForms", "AssignedUser_SystemUserID");
+            CreateIndex("dbo.HotRushForms", "LastModifiedUser_SystemUserID");
+            CreateIndex("dbo.HotRushForms", "Priority_RecordId");
+            CreateIndex("dbo.HotRushForms", "RequestedUser_SystemUserID");
+            CreateIndex("dbo.HotRushForms", "Status_StatusId");
+            CreateIndex("dbo.HotRushForms", "SubmittedUser_SystemUserID");
+            CreateIndex("dbo.LowInventoryForms", "AssignedUser_SystemUserID");
+            CreateIndex("dbo.LowInventoryForms", "LastModifiedUser_SystemUserID");
+            CreateIndex("dbo.LowInventoryForms", "Plant_RecordId");
+            CreateIndex("dbo.LowInventoryForms", "Priority_RecordId");
+            CreateIndex("dbo.LowInventoryForms", "RequestedUser_SystemUserID");
+            CreateIndex("dbo.LowInventoryForms", "Status_StatusId");
+            CreateIndex("dbo.LowInventoryForms", "SubmittedUser_SystemUserID");
+            CreateIndex("dbo.MustIncludeForms", "AssignedUser_SystemUserID");
+            CreateIndex("dbo.MustIncludeForms", "LastModifiedUser_SystemUserID");
+            CreateIndex("dbo.MustIncludeForms", "Priority_RecordId");
+            CreateIndex("dbo.MustIncludeForms", "RequestedUser_SystemUserID");
+            CreateIndex("dbo.MustIncludeForms", "Status_StatusId");
+            CreateIndex("dbo.MustIncludeForms", "SubmittedUser_SystemUserID");
+            CreateIndex("dbo.MustIncludeForms", "Warehouse_RecordId");
+            CreateIndex("dbo.OrderCancellationForms", "AssignedUser_SystemUserID");
+            CreateIndex("dbo.OrderCancellationForms", "LastModifiedUser_SystemUserID");
+            CreateIndex("dbo.OrderCancellationForms", "Priority_RecordId");
+            CreateIndex("dbo.OrderCancellationForms", "RequestedUser_SystemUserID");
+            CreateIndex("dbo.OrderCancellationForms", "Status_StatusId");
+            CreateIndex("dbo.OrderCancellationForms", "SubmittedUser_SystemUserID");
+            CreateIndex("dbo.PriceChangeRequestForms", "AssignedUser_SystemUserID");
+            CreateIndex("dbo.PriceChangeRequestForms", "LastModifiedUser_SystemUserID");
+            CreateIndex("dbo.PriceChangeRequestForms", "Priority_RecordId");
+            CreateIndex("dbo.PriceChangeRequestForms", "Product_RecordId");
+            CreateIndex("dbo.PriceChangeRequestForms", "RequestedUser_SystemUserID");
+            CreateIndex("dbo.PriceChangeRequestForms", "Status_StatusId");
+            CreateIndex("dbo.PriceChangeRequestForms", "SubmittedUser_SystemUserID");
+            CreateIndex("dbo.RequestForCheckForms", "AssignedUser_SystemUserID");
+            CreateIndex("dbo.RequestForCheckForms", "LastModifiedUser_SystemUserID");
+            CreateIndex("dbo.RequestForCheckForms", "Priority_RecordId");
+            CreateIndex("dbo.RequestForCheckForms", "RequestedUser_SystemUserID");
+            CreateIndex("dbo.RequestForCheckForms", "Status_StatusId");
+            CreateIndex("dbo.RequestForCheckForms", "SubmittedUser_SystemUserID");
+            CreateIndex("dbo.RequestNotifications", "Form_FormID");
+            CreateIndex("dbo.RequestNotifications", "SentBy_SystemUserID");
+            CreateIndex("dbo.SampleRequestForms", "AssignedUser_SystemUserID");
+            CreateIndex("dbo.SampleRequestForms", "LastModifiedUser_SystemUserID");
+            CreateIndex("dbo.SampleRequestForms", "Priority_RecordId");
+            CreateIndex("dbo.SampleRequestForms", "RequestedUser_SystemUserID");
+            CreateIndex("dbo.SampleRequestForms", "Status_StatusId");
+            CreateIndex("dbo.SampleRequestForms", "SubmittedUser_SystemUserID");
+        }
+        
+        public override void Down()
+        {
+            DropIndex("dbo.SampleRequestForms", new[] { "SubmittedUser_SystemUserID" });
+            DropIndex("dbo.SampleRequestForms", new[] { "Status_StatusId" });
+            DropIndex("dbo.SampleRequestForms", new[] { "RequestedUser_SystemUserID" });
+            DropIndex("dbo.SampleRequestForms", new[] { "Priority_RecordId" });
+            DropIndex("dbo.SampleRequestForms", new[] { "LastModifiedUser_SystemUserID" });
+            DropIndex("dbo.SampleRequestForms", new[] { "AssignedUser_SystemUserID" });
+            DropIndex("dbo.RequestNotifications", new[] { "SentBy_SystemUserID" });
+            DropIndex("dbo.RequestNotifications", new[] { "Form_FormID" });
+            DropIndex("dbo.RequestForCheckForms", new[] { "SubmittedUser_SystemUserID" });
+            DropIndex("dbo.RequestForCheckForms", new[] { "Status_StatusId" });
+            DropIndex("dbo.RequestForCheckForms", new[] { "RequestedUser_SystemUserID" });
+            DropIndex("dbo.RequestForCheckForms", new[] { "Priority_RecordId" });
+            DropIndex("dbo.RequestForCheckForms", new[] { "LastModifiedUser_SystemUserID" });
+            DropIndex("dbo.RequestForCheckForms", new[] { "AssignedUser_SystemUserID" });
+            DropIndex("dbo.PriceChangeRequestForms", new[] { "SubmittedUser_SystemUserID" });
+            DropIndex("dbo.PriceChangeRequestForms", new[] { "Status_StatusId" });
+            DropIndex("dbo.PriceChangeRequestForms", new[] { "RequestedUser_SystemUserID" });
+            DropIndex("dbo.PriceChangeRequestForms", new[] { "Product_RecordId" });
+            DropIndex("dbo.PriceChangeRequestForms", new[] { "Priority_RecordId" });
+            DropIndex("dbo.PriceChangeRequestForms", new[] { "LastModifiedUser_SystemUserID" });
+            DropIndex("dbo.PriceChangeRequestForms", new[] { "AssignedUser_SystemUserID" });
+            DropIndex("dbo.OrderCancellationForms", new[] { "SubmittedUser_SystemUserID" });
+            DropIndex("dbo.OrderCancellationForms", new[] { "Status_StatusId" });
+            DropIndex("dbo.OrderCancellationForms", new[] { "RequestedUser_SystemUserID" });
+            DropIndex("dbo.OrderCancellationForms", new[] { "Priority_RecordId" });
+            DropIndex("dbo.OrderCancellationForms", new[] { "LastModifiedUser_SystemUserID" });
+            DropIndex("dbo.OrderCancellationForms", new[] { "AssignedUser_SystemUserID" });
+            DropIndex("dbo.MustIncludeForms", new[] { "Warehouse_RecordId" });
+            DropIndex("dbo.MustIncludeForms", new[] { "SubmittedUser_SystemUserID" });
+            DropIndex("dbo.MustIncludeForms", new[] { "Status_StatusId" });
+            DropIndex("dbo.MustIncludeForms", new[] { "RequestedUser_SystemUserID" });
+            DropIndex("dbo.MustIncludeForms", new[] { "Priority_RecordId" });
+            DropIndex("dbo.MustIncludeForms", new[] { "LastModifiedUser_SystemUserID" });
+            DropIndex("dbo.MustIncludeForms", new[] { "AssignedUser_SystemUserID" });
+            DropIndex("dbo.LowInventoryForms", new[] { "SubmittedUser_SystemUserID" });
+            DropIndex("dbo.LowInventoryForms", new[] { "Status_StatusId" });
+            DropIndex("dbo.LowInventoryForms", new[] { "RequestedUser_SystemUserID" });
+            DropIndex("dbo.LowInventoryForms", new[] { "Priority_RecordId" });
+            DropIndex("dbo.LowInventoryForms", new[] { "Plant_RecordId" });
+            DropIndex("dbo.LowInventoryForms", new[] { "LastModifiedUser_SystemUserID" });
+            DropIndex("dbo.LowInventoryForms", new[] { "AssignedUser_SystemUserID" });
+            DropIndex("dbo.HotRushForms", new[] { "SubmittedUser_SystemUserID" });
+            DropIndex("dbo.HotRushForms", new[] { "Status_StatusId" });
+            DropIndex("dbo.HotRushForms", new[] { "RequestedUser_SystemUserID" });
+            DropIndex("dbo.HotRushForms", new[] { "Priority_RecordId" });
+            DropIndex("dbo.HotRushForms", new[] { "LastModifiedUser_SystemUserID" });
+            DropIndex("dbo.HotRushForms", new[] { "AssignedUser_SystemUserID" });
+            DropIndex("dbo.FormPermissions", new[] { "UserRole_UserRoleId" });
+            DropIndex("dbo.FavoriteForms", new[] { "User_SystemUserID" });
+            DropIndex("dbo.FavoriteForms", new[] { "Form_FormID" });
+            DropIndex("dbo.EmailAddresses", new[] { "TForm_FormID" });
+            DropIndex("dbo.ExpeditedOrderForms", new[] { "SubmittedUser_SystemUserID" });
+            DropIndex("dbo.ExpeditedOrderForms", new[] { "Status_StatusId" });
+            DropIndex("dbo.ExpeditedOrderForms", new[] { "RequestedUser_SystemUserID" });
+            DropIndex("dbo.ExpeditedOrderForms", new[] { "Priority_RecordId" });
+            DropIndex("dbo.ExpeditedOrderForms", new[] { "LastModifiedUser_SystemUserID" });
+            DropIndex("dbo.ExpeditedOrderForms", new[] { "ExpediteCode_ExpediteCodeID" });
+            DropIndex("dbo.ExpeditedOrderForms", new[] { "AssignedUser_SystemUserID" });
+            DropIndex("dbo.SkuQuantities", new[] { "ExpeditedOrderForm_RecordId" });
+            DropIndex("dbo.SkuQuantities", new[] { "DirectOrderForm_RecordId" });
+            DropIndex("dbo.DirectOrderForms", new[] { "SubmittedUser_SystemUserID" });
+            DropIndex("dbo.DirectOrderForms", new[] { "Status_StatusId" });
+            DropIndex("dbo.DirectOrderForms", new[] { "RequestedUser_SystemUserID" });
+            DropIndex("dbo.DirectOrderForms", new[] { "Priority_RecordId" });
+            DropIndex("dbo.DirectOrderForms", new[] { "LastModifiedUser_SystemUserID" });
+            DropIndex("dbo.DirectOrderForms", new[] { "ExpediteCode_ExpediteCodeID" });
+            DropIndex("dbo.DirectOrderForms", new[] { "AssignedUser_SystemUserID" });
+            DropIndex("dbo.SystemUsers", new[] { "UserRole_UserRoleId" });
+            DropIndex("dbo.Comments", new[] { "User_SystemUserID" });
+            DropIndex("dbo.Comments", new[] { "Form_FormID" });
+        }
+    }
+}

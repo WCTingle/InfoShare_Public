@@ -1,0 +1,1323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4DB63F1A-822C-4369-AADC-2DFCA6CBCE90}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tingle_WebForms</RootNamespace>
+    <AssemblyName>Tingle_WebForms</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+    <NuGetPackageImportStamp>be5be5f1</NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;ro</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery, Version=2.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.2.1.3\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery.UI.Combined, Version=1.11.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.UI.Combined.1.11.4\lib\net45\AspNet.ScriptManager.jQuery.UI.Combined.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.3.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.3.4.13329\lib\net45-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.3.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.3.4.13329\lib\net45-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.3.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.3.4.13329\lib\net45-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.3.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.3.4.13329\lib\net45-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.3.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.3.4.13329\lib\net45-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.3.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.3.4.13329\lib\net45-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls, Version=1.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Membership.OpenAuth, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Membership.OpenAuth.2.0.1\lib\net45\Microsoft.AspNet.Membership.OpenAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.2.0\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.2.0\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.2.0.0\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Telerik\UI for ASP.NET AJAX Q1 2015\Bin45\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Telerik\UI for ASP.NET AJAX Q1 2015\Bin45\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Core">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Telerik\UI for ASP.NET AJAX Q1 2015\Bin45\..\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Fixed">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Telerik\UI for ASP.NET AJAX Q1 2015\Bin45\..\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Fixed.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Flow">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Telerik\UI for ASP.NET AJAX Q1 2015\Bin45\..\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Flow.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Flow.FormatProviders.Pdf">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Telerik\UI for ASP.NET AJAX Q1 2015\Bin45\..\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Flow.FormatProviders.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Telerik\UI for ASP.NET AJAX Q1 2015\Bin45\..\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Spreadsheet.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Telerik\UI for ASP.NET AJAX Q1 2015\Bin45\..\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Telerik\UI for ASP.NET AJAX Q1 2015\Bin45\..\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Maths">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Telerik\UI for ASP.NET AJAX Q1 2015\Bin45\..\AdditionalLibraries\Bin45\Telerik.Windows.Maths.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Zip">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Telerik\UI for ASP.NET AJAX Q1 2015\Bin45\..\AdditionalLibraries\Bin45\Telerik.Windows.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Trirand.Web, Version=4.5.3.0, Culture=neutral, PublicKeyToken=e2819dc449af3295, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Trirand.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Manage.aspx" />
+    <Content Include="Account\OpenAuthProviders.ascx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="Administration.aspx" />
+    <Content Include="bin\Antlr3.Runtime.dll" />
+    <Content Include="bin\Antlr3.Runtime.pdb" />
+    <Content Include="bin\AspNet.ScriptManager.jQuery.dll" />
+    <Content Include="bin\AspNet.ScriptManager.jQuery.UI.Combined.dll" />
+    <Content Include="bin\DotNetOpenAuth.AspNet.dll" />
+    <Content Include="bin\DotNetOpenAuth.AspNet.xml" />
+    <Content Include="bin\DotNetOpenAuth.Core.dll" />
+    <Content Include="bin\DotNetOpenAuth.Core.xml" />
+    <Content Include="bin\DotNetOpenAuth.OAuth.Consumer.dll" />
+    <Content Include="bin\DotNetOpenAuth.OAuth.Consumer.xml" />
+    <Content Include="bin\DotNetOpenAuth.OAuth.dll" />
+    <Content Include="bin\DotNetOpenAuth.OAuth.xml" />
+    <Content Include="bin\DotNetOpenAuth.OpenId.dll" />
+    <Content Include="bin\DotNetOpenAuth.OpenId.RelyingParty.dll" />
+    <Content Include="bin\DotNetOpenAuth.OpenId.RelyingParty.xml" />
+    <Content Include="bin\DotNetOpenAuth.OpenId.xml" />
+    <Content Include="bin\Microsoft.AspNet.FriendlyUrls.dll" />
+    <Content Include="bin\Microsoft.AspNet.FriendlyUrls.xml" />
+    <Content Include="bin\Microsoft.AspNet.Membership.OpenAuth.dll" />
+    <Content Include="bin\Microsoft.AspNet.Membership.OpenAuth.xml" />
+    <Content Include="bin\Microsoft.AspNet.Web.Optimization.WebForms.dll" />
+    <Content Include="bin\Microsoft.ScriptManager.MSAjax.dll" />
+    <Content Include="bin\Microsoft.ScriptManager.WebForms.dll" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\Mono.Math.dll" />
+    <Content Include="bin\Mono.Math.xml" />
+    <Content Include="bin\Org.Mentalis.Security.Cryptography.dll" />
+    <Content Include="bin\Org.Mentalis.Security.Cryptography.xml" />
+    <Content Include="bin\System.ComponentModel.DataAnnotations.dll" />
+    <Content Include="bin\System.Configuration.dll" />
+    <Content Include="bin\System.Net.Http.Extensions.dll" />
+    <Content Include="bin\System.Net.Http.Extensions.xml" />
+    <Content Include="bin\System.Net.Http.Primitives.dll" />
+    <Content Include="bin\System.Net.Http.Primitives.xml" />
+    <Content Include="bin\System.Web.Optimization.dll" />
+    <Content Include="bin\System.Web.Services.dll" />
+    <Content Include="bin\Tingle_WebForms.dll" />
+    <Content Include="bin\Tingle_WebForms.pdb" />
+    <Content Include="bin\Trirand.Web.dll" />
+    <Content Include="bin\WebGrease.dll" />
+    <Content Include="CannotWaitForContainerDetails.ascx" />
+    <Content Include="CannotWaitForContainerForm.aspx" />
+    <Content Include="Content\Chat.css" />
+    <Content Include="Content\Icons\1.gif" />
+    <Content Include="Content\Icons\10.gif" />
+    <Content Include="Content\Icons\11.gif" />
+    <Content Include="Content\Icons\12.gif" />
+    <Content Include="Content\Icons\13.gif" />
+    <Content Include="Content\Icons\14.gif" />
+    <Content Include="Content\Icons\15.gif" />
+    <Content Include="Content\Icons\16.gif" />
+    <Content Include="Content\Icons\17.gif" />
+    <Content Include="Content\Icons\18.gif" />
+    <Content Include="Content\Icons\19.gif" />
+    <Content Include="Content\Icons\2.gif" />
+    <Content Include="Content\Icons\20.gif" />
+    <Content Include="Content\Icons\21.gif" />
+    <Content Include="Content\Icons\22.gif" />
+    <Content Include="Content\Icons\23.gif" />
+    <Content Include="Content\Icons\24.gif" />
+    <Content Include="Content\Icons\25.gif" />
+    <Content Include="Content\Icons\3.gif" />
+    <Content Include="Content\Icons\4.gif" />
+    <Content Include="Content\Icons\5.gif" />
+    <Content Include="Content\Icons\6.gif" />
+    <Content Include="Content\Icons\7.gif" />
+    <Content Include="Content\Icons\8.gif" />
+    <Content Include="Content\Icons\9.gif" />
+    <Content Include="Content\Site_2_0.css" />
+    <Content Include="Content\themes\base\accordion.css" />
+    <Content Include="Content\themes\base\all.css" />
+    <Content Include="Content\themes\base\autocomplete.css" />
+    <Content Include="Content\themes\base\base.css" />
+    <Content Include="Content\themes\base\button.css" />
+    <Content Include="Content\themes\base\core.css" />
+    <Content Include="Content\themes\base\datepicker.css" />
+    <Content Include="Content\themes\base\dialog.css" />
+    <Content Include="Content\themes\base\draggable.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\menu.css" />
+    <Content Include="Content\themes\base\progressbar.css" />
+    <Content Include="Content\themes\base\resizable.css" />
+    <Content Include="Content\themes\base\selectable.css" />
+    <Content Include="Content\themes\base\selectmenu.css" />
+    <Content Include="Content\themes\base\slider.css" />
+    <Content Include="Content\themes\base\sortable.css" />
+    <Content Include="Content\themes\base\spinner.css" />
+    <Content Include="Content\themes\base\tabs.css" />
+    <Content Include="Content\themes\base\theme.css" />
+    <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="DirectOrderForm.aspx" />
+    <Content Include="HotRushForm.aspx" />
+    <Content Include="Images\approve-empty.png" />
+    <Content Include="Images\approve-image.png" />
+    <Content Include="Images\cancelicon.png" />
+    <Content Include="Images\downarrow.png" />
+    <Content Include="Images\editpencil.jpg" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\plussign.png" />
+    <Content Include="Images\saveicon.png" />
+    <Content Include="Images\search.jpg" />
+    <Content Include="InventoryApproval.aspx" />
+    <Content Include="LowInventoryForm.aspx" />
+    <Content Include="MustIncludeForm.aspx" />
+    <Content Include="OrderCancellationDetails.ascx" />
+    <Content Include="OrderCancellationForm.aspx" />
+    <Content Include="PriceChangeRequestForm.aspx" />
+    <Content Include="Error.aspx" />
+    <Content Include="ExpeditedOrderForm.aspx" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\ExpeditedOrderForm.png" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\Logo.jpg" />
+    <Content Include="Images\orderedList0.png" />
+    <Content Include="Images\orderedList1.png" />
+    <Content Include="Images\orderedList2.png" />
+    <Content Include="Images\orderedList3.png" />
+    <Content Include="Images\orderedList4.png" />
+    <Content Include="Images\orderedList5.png" />
+    <Content Include="Images\orderedList6.png" />
+    <Content Include="Images\orderedList7.png" />
+    <Content Include="Images\orderedList8.png" />
+    <Content Include="Images\orderedList9.png" />
+    <Content Include="packages.config" />
+    <Content Include="Privacy.aspx" />
+    <Content Include="bin\Tingle_WebForms.dll.config" />
+    <Content Include="ReadMe.txt" />
+    <Content Include="ReportCannotWaitForContainer.aspx" />
+    <Content Include="ReportDirectOrder.aspx" />
+    <Content Include="ReportExpeditedOrder.aspx" />
+    <Content Include="ReportHotRush.aspx" />
+    <Content Include="ReportLowInventory.aspx" />
+    <Content Include="ReportMustInclude.aspx" />
+    <Content Include="ReportOrderCancellation.aspx" />
+    <Content Include="ReportPriceChangeRequest.aspx" />
+    <Content Include="ReportRequestForCheck.aspx" />
+    <Content Include="Reports.aspx" />
+    <Content Include="ReportSampleRequest.aspx" />
+    <Content Include="RequestForCheckForm.aspx" />
+    <Content Include="SampleRequestForm.aspx" />
+    <None Include="Scripts\jquery-2.1.3-vsdoc.js" />
+    <Content Include="Scripts\jquery-2.1.3.js" />
+    <Content Include="Scripts\jquery-2.1.3.min.js" />
+    <Content Include="Scripts\jquery-ui-1.11.4.js" />
+    <Content Include="Scripts\jquery-ui-1.11.4.min.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.0.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.0.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\scripts_1.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Search.aspx" />
+    <Content Include="TestEmail.aspx" />
+    <Content Include="TingleChat.aspx" />
+    <Content Include="ToDo.txt" />
+    <Content Include="Unauthorized.aspx" />
+    <Content Include="UserDashboard.aspx" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Bundle.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administration.aspx.cs">
+      <DependentUpon>Administration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration.aspx.designer.cs">
+      <DependentUpon>Administration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.designer.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.designer.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="CannotWaitForContainerDetails.ascx.cs">
+      <DependentUpon>CannotWaitForContainerDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CannotWaitForContainerDetails.ascx.designer.cs">
+      <DependentUpon>CannotWaitForContainerDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CannotWaitForContainerForm.aspx.cs">
+      <DependentUpon>CannotWaitForContainerForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CannotWaitForContainerForm.aspx.designer.cs">
+      <DependentUpon>CannotWaitForContainerForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChatHub.cs" />
+    <Compile Include="DirectOrderForm.aspx.cs">
+      <DependentUpon>DirectOrderForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DirectOrderForm.aspx.designer.cs">
+      <DependentUpon>DirectOrderForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HotRushForm.aspx.cs">
+      <DependentUpon>HotRushForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HotRushForm.aspx.designer.cs">
+      <DependentUpon>HotRushForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryApproval.aspx.cs">
+      <DependentUpon>InventoryApproval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InventoryApproval.aspx.designer.cs">
+      <DependentUpon>InventoryApproval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\SystemComment.cs" />
+    <Compile Include="LowInventoryForm.aspx.cs">
+      <DependentUpon>LowInventoryForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LowInventoryForm.aspx.designer.cs">
+      <DependentUpon>LowInventoryForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411221715041_InitialCreate.cs" />
+    <Compile Include="Migrations\201411221715041_InitialCreate.Designer.cs">
+      <DependentUpon>201411221715041_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411221859330_Add_PriceChangeRequesForm.cs" />
+    <Compile Include="Migrations\201411221859330_Add_PriceChangeRequesForm.Designer.cs">
+      <DependentUpon>201411221859330_Add_PriceChangeRequesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411230430571_AddRequestHandler.cs" />
+    <Compile Include="Migrations\201411230430571_AddRequestHandler.Designer.cs">
+      <DependentUpon>201411230430571_AddRequestHandler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411240450227_AddOrderCancellation.cs" />
+    <Compile Include="Migrations\201411240450227_AddOrderCancellation.Designer.cs">
+      <DependentUpon>201411240450227_AddOrderCancellation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411250118118_AddPOStatuses.cs" />
+    <Compile Include="Migrations\201411250118118_AddPOStatuses.Designer.cs">
+      <DependentUpon>201411250118118_AddPOStatuses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411250143163_AddCompany.cs" />
+    <Compile Include="Migrations\201411250143163_AddCompany.Designer.cs">
+      <DependentUpon>201411250143163_AddCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411252349105_ChangeExpeditorHandlingToRequestHandler.cs" />
+    <Compile Include="Migrations\201411252349105_ChangeExpeditorHandlingToRequestHandler.Designer.cs">
+      <DependentUpon>201411252349105_ChangeExpeditorHandlingToRequestHandler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411260509393_AddCompletedNotesAndCCCompletedFormToEmail.cs" />
+    <Compile Include="Migrations\201411260509393_AddCompletedNotesAndCCCompletedFormToEmail.Designer.cs">
+      <DependentUpon>201411260509393_AddCompletedNotesAndCCCompletedFormToEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411262230025_ModelUpdate.cs" />
+    <Compile Include="Migrations\201411262230025_ModelUpdate.Designer.cs">
+      <DependentUpon>201411262230025_ModelUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411262345057_AddHotRushForm.cs" />
+    <Compile Include="Migrations\201411262345057_AddHotRushForm.Designer.cs">
+      <DependentUpon>201411262345057_AddHotRushForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411270305365_AddLowInventoryForm.cs" />
+    <Compile Include="Migrations\201411270305365_AddLowInventoryForm.Designer.cs">
+      <DependentUpon>201411270305365_AddLowInventoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411270409082_ChangeQuantityToString.cs" />
+    <Compile Include="Migrations\201411270409082_ChangeQuantityToString.Designer.cs">
+      <DependentUpon>201411270409082_ChangeQuantityToString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411270421031_AddSampleRequestForm.cs" />
+    <Compile Include="Migrations\201411270421031_AddSampleRequestForm.Designer.cs">
+      <DependentUpon>201411270421031_AddSampleRequestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411271646102_AddDirectOrderForm.cs" />
+    <Compile Include="Migrations\201411271646102_AddDirectOrderForm.Designer.cs">
+      <DependentUpon>201411271646102_AddDirectOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411281917180_AddRequestForCheckForm.cs" />
+    <Compile Include="Migrations\201411281917180_AddRequestForCheckForm.Designer.cs">
+      <DependentUpon>201411281917180_AddRequestForCheckForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411282016066_AddMustIncludeForm.cs" />
+    <Compile Include="Migrations\201411282016066_AddMustIncludeForm.Designer.cs">
+      <DependentUpon>201411282016066_AddMustIncludeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201502190332503_FormPermissions_Add.cs" />
+    <Compile Include="Migrations\201502190332503_FormPermissions_Add.Designer.cs">
+      <DependentUpon>201502190332503_FormPermissions_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201502222027218_NotificationEmailAddresses_Add.cs" />
+    <Compile Include="Migrations\201502222027218_NotificationEmailAddresses_Add.Designer.cs">
+      <DependentUpon>201502222027218_NotificationEmailAddresses_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201502222140533_Comments_Add.cs" />
+    <Compile Include="Migrations\201502222140533_Comments_Add.Designer.cs">
+      <DependentUpon>201502222140533_Comments_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201502222203219_Comments_Update.cs" />
+    <Compile Include="Migrations\201502222203219_Comments_Update.Designer.cs">
+      <DependentUpon>201502222203219_Comments_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201502222215033_Comments_Update2.cs" />
+    <Compile Include="Migrations\201502222215033_Comments_Update2.Designer.cs">
+      <DependentUpon>201502222215033_Comments_Update2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201502222219459_Comments_Update21.cs" />
+    <Compile Include="Migrations\201502222219459_Comments_Update21.Designer.cs">
+      <DependentUpon>201502222219459_Comments_Update21.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201502260323166_AddEmailToSystemUsers.cs" />
+    <Compile Include="Migrations\201502260323166_AddEmailToSystemUsers.Designer.cs">
+      <DependentUpon>201502260323166_AddEmailToSystemUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201502260356322_CommentLength200.cs" />
+    <Compile Include="Migrations\201502260356322_CommentLength200.Designer.cs">
+      <DependentUpon>201502260356322_CommentLength200.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201502262244439_AddRequestNotifications.cs" />
+    <Compile Include="Migrations\201502262244439_AddRequestNotifications.Designer.cs">
+      <DependentUpon>201502262244439_AddRequestNotifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201502280241267_UpdateDirectOrder.cs" />
+    <Compile Include="Migrations\201502280241267_UpdateDirectOrder.Designer.cs">
+      <DependentUpon>201502280241267_UpdateDirectOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201502280309166_UpdateDirectOrder2.cs" />
+    <Compile Include="Migrations\201502280309166_UpdateDirectOrder2.Designer.cs">
+      <DependentUpon>201502280309166_UpdateDirectOrder2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201502280310592_UpdateDirectOrder3.cs" />
+    <Compile Include="Migrations\201502280310592_UpdateDirectOrder3.Designer.cs">
+      <DependentUpon>201502280310592_UpdateDirectOrder3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201502280315320_UpdateDirectOrder4.cs" />
+    <Compile Include="Migrations\201502280315320_UpdateDirectOrder4.Designer.cs">
+      <DependentUpon>201502280315320_UpdateDirectOrder4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503012210394_EmailNotiticationModelForEachToEmail.cs" />
+    <Compile Include="Migrations\201503012210394_EmailNotiticationModelForEachToEmail.Designer.cs">
+      <DependentUpon>201503012210394_EmailNotiticationModelForEachToEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503012339252_AddBodyHtmlToRequestNotifications.cs" />
+    <Compile Include="Migrations\201503012339252_AddBodyHtmlToRequestNotifications.Designer.cs">
+      <DependentUpon>201503012339252_AddBodyHtmlToRequestNotifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503020106427_UpdateAlLFormModelsForLatestChanges.cs" />
+    <Compile Include="Migrations\201503020106427_UpdateAlLFormModelsForLatestChanges.Designer.cs">
+      <DependentUpon>201503020106427_UpdateAlLFormModelsForLatestChanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503020443435_AddShipToPhone.cs" />
+    <Compile Include="Migrations\201503020443435_AddShipToPhone.Designer.cs">
+      <DependentUpon>201503020443435_AddShipToPhone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503040350150_AddPriorityModel.cs" />
+    <Compile Include="Migrations\201503040350150_AddPriorityModel.Designer.cs">
+      <DependentUpon>201503040350150_AddPriorityModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503072241356_PriorityModelUpdates.cs" />
+    <Compile Include="Migrations\201503072241356_PriorityModelUpdates.Designer.cs">
+      <DependentUpon>201503072241356_PriorityModelUpdates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503081929296_AddLastModifiedTimestamp.cs" />
+    <Compile Include="Migrations\201503081929296_AddLastModifiedTimestamp.Designer.cs">
+      <DependentUpon>201503081929296_AddLastModifiedTimestamp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503110205411_AddPriceChangeRequestProducts.cs" />
+    <Compile Include="Migrations\201503110205411_AddPriceChangeRequestProducts.Designer.cs">
+      <DependentUpon>201503110205411_AddPriceChangeRequestProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503110215286_AddProductModelToPriceChangeRequest.cs" />
+    <Compile Include="Migrations\201503110215286_AddProductModelToPriceChangeRequest.Designer.cs">
+      <DependentUpon>201503110215286_AddProductModelToPriceChangeRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503110244575_AddWarehouseModel.cs" />
+    <Compile Include="Migrations\201503110244575_AddWarehouseModel.Designer.cs">
+      <DependentUpon>201503110244575_AddWarehouseModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503110253016_FixPlantIssue.cs" />
+    <Compile Include="Migrations\201503110253016_FixPlantIssue.Designer.cs">
+      <DependentUpon>201503110253016_FixPlantIssue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503110305471_AddPlantToLowInventoryForm.cs" />
+    <Compile Include="Migrations\201503110305471_AddPlantToLowInventoryForm.Designer.cs">
+      <DependentUpon>201503110305471_AddPlantToLowInventoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503110345204_AddWarehouses_MustInclude.cs" />
+    <Compile Include="Migrations\201503110345204_AddWarehouses_MustInclude.Designer.cs">
+      <DependentUpon>201503110345204_AddWarehouses_MustInclude.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503110405420_AddCodeToPOStatus.cs" />
+    <Compile Include="Migrations\201503110405420_AddCodeToPOStatus.Designer.cs">
+      <DependentUpon>201503110405420_AddCodeToPOStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503110447233_MultiplePOStatuses.cs" />
+    <Compile Include="Migrations\201503110447233_MultiplePOStatuses.Designer.cs">
+      <DependentUpon>201503110447233_MultiplePOStatuses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503120247374_AddSkuQuantityModel.cs" />
+    <Compile Include="Migrations\201503120247374_AddSkuQuantityModel.Designer.cs">
+      <DependentUpon>201503120247374_AddSkuQuantityModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503120302590_AddExpOrderFormToSQ.cs" />
+    <Compile Include="Migrations\201503120302590_AddExpOrderFormToSQ.Designer.cs">
+      <DependentUpon>201503120302590_AddExpOrderFormToSQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503120312594_AddTempIdToSkuQuantity.cs" />
+    <Compile Include="Migrations\201503120312594_AddTempIdToSkuQuantity.Designer.cs">
+      <DependentUpon>201503120312594_AddTempIdToSkuQuantity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503120327477_AddCompletedToSkuQuantity.cs" />
+    <Compile Include="Migrations\201503120327477_AddCompletedToSkuQuantity.Designer.cs">
+      <DependentUpon>201503120327477_AddCompletedToSkuQuantity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503140400038_UpdateSkuQuantityForDO.cs" />
+    <Compile Include="Migrations\201503140400038_UpdateSkuQuantityForDO.Designer.cs">
+      <DependentUpon>201503140400038_UpdateSkuQuantityForDO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503140416490_SQFix.cs" />
+    <Compile Include="Migrations\201503140416490_SQFix.Designer.cs">
+      <DependentUpon>201503140416490_SQFix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503170222366_FixNewUserSettings.cs" />
+    <Compile Include="Migrations\201503170222366_FixNewUserSettings.Designer.cs">
+      <DependentUpon>201503170222366_FixNewUserSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503191811115_ChatUpdate1.cs" />
+    <Compile Include="Migrations\201503191811115_ChatUpdate1.Designer.cs">
+      <DependentUpon>201503191811115_ChatUpdate1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503222026520_AddUserStatuses.cs" />
+    <Compile Include="Migrations\201503222026520_AddUserStatuses.Designer.cs">
+      <DependentUpon>201503222026520_AddUserStatuses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201504160251255_AddSkuToPriceChangeRequest.cs" />
+    <Compile Include="Migrations\201504160251255_AddSkuToPriceChangeRequest.Designer.cs">
+      <DependentUpon>201504160251255_AddSkuToPriceChangeRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201504160253513_IncreaseCommentSizeTo300.cs" />
+    <Compile Include="Migrations\201504160253513_IncreaseCommentSizeTo300.Designer.cs">
+      <DependentUpon>201504160253513_IncreaseCommentSizeTo300.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505070216151_IncreaseShipToPhoneSizeTo100.cs" />
+    <Compile Include="Migrations\201505070216151_IncreaseShipToPhoneSizeTo100.Designer.cs">
+      <DependentUpon>201505070216151_IncreaseShipToPhoneSizeTo100.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201507300426005_CannotWaitForContainerModel_Add.cs" />
+    <Compile Include="Migrations\201507300426005_CannotWaitForContainerModel_Add.Designer.cs">
+      <DependentUpon>201507300426005_CannotWaitForContainerModel_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508020349113_InventoryApprovalForm_Add.cs" />
+    <Compile Include="Migrations\201508020349113_InventoryApprovalForm_Add.Designer.cs">
+      <DependentUpon>201508020349113_InventoryApprovalForm_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508082038540_SystemUsers_AddInventoryApprovalUser.cs" />
+    <Compile Include="Migrations\201508082038540_SystemUsers_AddInventoryApprovalUser.Designer.cs">
+      <DependentUpon>201508082038540_SystemUsers_AddInventoryApprovalUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508082142322_InventoryApproval_ChangeCostToDecimal.cs" />
+    <Compile Include="Migrations\201508082142322_InventoryApproval_ChangeCostToDecimal.Designer.cs">
+      <DependentUpon>201508082142322_InventoryApproval_ChangeCostToDecimal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508090404254_Vendor_AddCurrentStock.cs" />
+    <Compile Include="Migrations\201508090404254_Vendor_AddCurrentStock.Designer.cs">
+      <DependentUpon>201508090404254_Vendor_AddCurrentStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508160514540_InventoryApproval_AddMaxLengths.cs" />
+    <Compile Include="Migrations\201508160514540_InventoryApproval_AddMaxLengths.Designer.cs">
+      <DependentUpon>201508160514540_InventoryApproval_AddMaxLengths.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508170542588_CancelledInventoryApproval.cs" />
+    <Compile Include="Migrations\201508170542588_CancelledInventoryApproval.Designer.cs">
+      <DependentUpon>201508170542588_CancelledInventoryApproval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508232020102_InventoryNotificationEmailList.cs" />
+    <Compile Include="Migrations\201508232020102_InventoryNotificationEmailList.Designer.cs">
+      <DependentUpon>201508232020102_InventoryNotificationEmailList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508240151059_InventoryApprovalNotifications.cs" />
+    <Compile Include="Migrations\201508240151059_InventoryApprovalNotifications.Designer.cs">
+      <DependentUpon>201508240151059_InventoryApprovalNotifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508242150424_InventoryApprovalComments.cs" />
+    <Compile Include="Migrations\201508242150424_InventoryApprovalComments.Designer.cs">
+      <DependentUpon>201508242150424_InventoryApprovalComments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509192216004_UserRequestAssociation_Add.cs" />
+    <Compile Include="Migrations\201509192216004_UserRequestAssociation_Add.Designer.cs">
+      <DependentUpon>201509192216004_UserRequestAssociation_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509192222586_UserAssignmentAssociation_Add.cs" />
+    <Compile Include="Migrations\201509192222586_UserAssignmentAssociation_Add.Designer.cs">
+      <DependentUpon>201509192222586_UserAssignmentAssociation_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CannotWaitForContainerForm.cs" />
+    <Compile Include="Models\Comments.cs" />
+    <Compile Include="Models\DirectOrderForm.cs" />
+    <Compile Include="Models\FavoriteForm.cs" />
+    <Compile Include="Models\FormPermissions.cs" />
+    <Compile Include="Models\HotRushForm.cs" />
+    <Compile Include="Models\InventoryApprovalForm.cs" />
+    <Compile Include="Models\InventoryApprovalNotifications.cs" />
+    <Compile Include="Models\InventoryComments.cs" />
+    <Compile Include="Models\LowInventoryForm.cs" />
+    <Compile Include="Models\MustIncludeForm.cs" />
+    <Compile Include="Models\NotificationEmailAddress.cs" />
+    <Compile Include="Models\NotifyOtherList.cs" />
+    <Compile Include="Models\OrderCancellationForm.cs" />
+    <Compile Include="Models\PriceChangeRequestForm.cs" />
+    <Compile Include="Models\PriceChangeRequestProducts.cs" />
+    <Compile Include="Models\Priority.cs" />
+    <Compile Include="Models\PurchaseOrderStatus.cs" />
+    <Compile Include="Models\RequestForCheckForm.cs" />
+    <Compile Include="Models\RequestNotifications.cs" />
+    <Compile Include="Models\SampleRequestForm.cs" />
+    <Compile Include="Models\SearchModel.cs" />
+    <Compile Include="Models\Plant.cs" />
+    <Compile Include="Models\SkuQuantity.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserAssignmentAssociation.cs" />
+    <Compile Include="Models\UserRequestAssociation.cs" />
+    <Compile Include="Models\UserStatus.cs" />
+    <Compile Include="Models\Vendor.cs" />
+    <Compile Include="Models\Warehouse.cs" />
+    <Compile Include="MustIncludeForm.aspx.cs">
+      <DependentUpon>MustIncludeForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MustIncludeForm.aspx.designer.cs">
+      <DependentUpon>MustIncludeForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderCancellationDetails.ascx.cs">
+      <DependentUpon>OrderCancellationDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderCancellationDetails.ascx.designer.cs">
+      <DependentUpon>OrderCancellationDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderCancellationForm.aspx.cs">
+      <DependentUpon>OrderCancellationForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderCancellationForm.aspx.designer.cs">
+      <DependentUpon>OrderCancellationForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PriceChangeRequestForm.aspx.cs">
+      <DependentUpon>PriceChangeRequestForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PriceChangeRequestForm.aspx.designer.cs">
+      <DependentUpon>PriceChangeRequestForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExpeditedOrderForm.aspx.cs">
+      <DependentUpon>ExpeditedOrderForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExpeditedOrderForm.aspx.designer.cs">
+      <DependentUpon>ExpeditedOrderForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\AddExpeditedOrderForm.cs" />
+    <Compile Include="Logic\SendEmail.cs" />
+    <Compile Include="Logic\UserLogic.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\DatabaseInitializer.cs" />
+    <Compile Include="Models\EmailAddress.cs" />
+    <Compile Include="Models\ExpediteCode.cs" />
+    <Compile Include="Models\ExpeditedOrderForm.cs" />
+    <Compile Include="Models\FormContext.cs" />
+    <Compile Include="Models\Status.cs" />
+    <Compile Include="Models\SystemUsers.cs" />
+    <Compile Include="Models\TForm.cs" />
+    <Compile Include="Models\UserRoles.cs" />
+    <Compile Include="Privacy.aspx.cs">
+      <DependentUpon>Privacy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Privacy.aspx.designer.cs">
+      <DependentUpon>Privacy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportCannotWaitForContainer.aspx.cs">
+      <DependentUpon>ReportCannotWaitForContainer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportCannotWaitForContainer.aspx.designer.cs">
+      <DependentUpon>ReportCannotWaitForContainer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDirectOrder.aspx.cs">
+      <DependentUpon>ReportDirectOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportDirectOrder.aspx.designer.cs">
+      <DependentUpon>ReportDirectOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportExpeditedOrder.aspx.cs">
+      <DependentUpon>ReportExpeditedOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportExpeditedOrder.aspx.designer.cs">
+      <DependentUpon>ReportExpeditedOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportHotRush.aspx.cs">
+      <DependentUpon>ReportHotRush.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportHotRush.aspx.designer.cs">
+      <DependentUpon>ReportHotRush.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportLowInventory.aspx.cs">
+      <DependentUpon>ReportLowInventory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportLowInventory.aspx.designer.cs">
+      <DependentUpon>ReportLowInventory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportMustInclude.aspx.cs">
+      <DependentUpon>ReportMustInclude.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportMustInclude.aspx.designer.cs">
+      <DependentUpon>ReportMustInclude.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportOrderCancellation.aspx.cs">
+      <DependentUpon>ReportOrderCancellation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportOrderCancellation.aspx.designer.cs">
+      <DependentUpon>ReportOrderCancellation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPriceChangeRequest.aspx.cs">
+      <DependentUpon>ReportPriceChangeRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportPriceChangeRequest.aspx.designer.cs">
+      <DependentUpon>ReportPriceChangeRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportRequestForCheck.aspx.cs">
+      <DependentUpon>ReportRequestForCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportRequestForCheck.aspx.designer.cs">
+      <DependentUpon>ReportRequestForCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports.aspx.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports.aspx.designer.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportSampleRequest.aspx.cs">
+      <DependentUpon>ReportSampleRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportSampleRequest.aspx.designer.cs">
+      <DependentUpon>ReportSampleRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RequestForCheckForm.aspx.cs">
+      <DependentUpon>RequestForCheckForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RequestForCheckForm.aspx.designer.cs">
+      <DependentUpon>RequestForCheckForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SampleRequestForm.aspx.cs">
+      <DependentUpon>SampleRequestForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SampleRequestForm.aspx.designer.cs">
+      <DependentUpon>SampleRequestForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="TestEmail.aspx.cs">
+      <DependentUpon>TestEmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestEmail.aspx.designer.cs">
+      <DependentUpon>TestEmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TingleChat.aspx.cs">
+      <DependentUpon>TingleChat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TingleChat.aspx.designer.cs">
+      <DependentUpon>TingleChat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Unauthorized.aspx.cs">
+      <DependentUpon>Unauthorized.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Unauthorized.aspx.designer.cs">
+      <DependentUpon>Unauthorized.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserDashboard.aspx.cs">
+      <DependentUpon>UserDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserDashboard.aspx.designer.cs">
+      <DependentUpon>UserDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Mobile.Master" />
+    <Content Include="Scripts\jquery-2.1.3.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201411221715041_InitialCreate.resx">
+      <DependentUpon>201411221715041_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411221859330_Add_PriceChangeRequesForm.resx">
+      <DependentUpon>201411221859330_Add_PriceChangeRequesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411230430571_AddRequestHandler.resx">
+      <DependentUpon>201411230430571_AddRequestHandler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411240450227_AddOrderCancellation.resx">
+      <DependentUpon>201411240450227_AddOrderCancellation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411250118118_AddPOStatuses.resx">
+      <DependentUpon>201411250118118_AddPOStatuses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411250143163_AddCompany.resx">
+      <DependentUpon>201411250143163_AddCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411252349105_ChangeExpeditorHandlingToRequestHandler.resx">
+      <DependentUpon>201411252349105_ChangeExpeditorHandlingToRequestHandler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411260509393_AddCompletedNotesAndCCCompletedFormToEmail.resx">
+      <DependentUpon>201411260509393_AddCompletedNotesAndCCCompletedFormToEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411262230025_ModelUpdate.resx">
+      <DependentUpon>201411262230025_ModelUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411262345057_AddHotRushForm.resx">
+      <DependentUpon>201411262345057_AddHotRushForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411270305365_AddLowInventoryForm.resx">
+      <DependentUpon>201411270305365_AddLowInventoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411270409082_ChangeQuantityToString.resx">
+      <DependentUpon>201411270409082_ChangeQuantityToString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411270421031_AddSampleRequestForm.resx">
+      <DependentUpon>201411270421031_AddSampleRequestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411271646102_AddDirectOrderForm.resx">
+      <DependentUpon>201411271646102_AddDirectOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411281917180_AddRequestForCheckForm.resx">
+      <DependentUpon>201411281917180_AddRequestForCheckForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411282016066_AddMustIncludeForm.resx">
+      <DependentUpon>201411282016066_AddMustIncludeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201502190332503_FormPermissions_Add.resx">
+      <DependentUpon>201502190332503_FormPermissions_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201502222027218_NotificationEmailAddresses_Add.resx">
+      <DependentUpon>201502222027218_NotificationEmailAddresses_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201502222140533_Comments_Add.resx">
+      <DependentUpon>201502222140533_Comments_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201502222203219_Comments_Update.resx">
+      <DependentUpon>201502222203219_Comments_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201502222215033_Comments_Update2.resx">
+      <DependentUpon>201502222215033_Comments_Update2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201502222219459_Comments_Update21.resx">
+      <DependentUpon>201502222219459_Comments_Update21.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201502260323166_AddEmailToSystemUsers.resx">
+      <DependentUpon>201502260323166_AddEmailToSystemUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201502260356322_CommentLength200.resx">
+      <DependentUpon>201502260356322_CommentLength200.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201502262244439_AddRequestNotifications.resx">
+      <DependentUpon>201502262244439_AddRequestNotifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201502280241267_UpdateDirectOrder.resx">
+      <DependentUpon>201502280241267_UpdateDirectOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201502280309166_UpdateDirectOrder2.resx">
+      <DependentUpon>201502280309166_UpdateDirectOrder2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201502280310592_UpdateDirectOrder3.resx">
+      <DependentUpon>201502280310592_UpdateDirectOrder3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201502280315320_UpdateDirectOrder4.resx">
+      <DependentUpon>201502280315320_UpdateDirectOrder4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503012210394_EmailNotiticationModelForEachToEmail.resx">
+      <DependentUpon>201503012210394_EmailNotiticationModelForEachToEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503012339252_AddBodyHtmlToRequestNotifications.resx">
+      <DependentUpon>201503012339252_AddBodyHtmlToRequestNotifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503020106427_UpdateAlLFormModelsForLatestChanges.resx">
+      <DependentUpon>201503020106427_UpdateAlLFormModelsForLatestChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503020443435_AddShipToPhone.resx">
+      <DependentUpon>201503020443435_AddShipToPhone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503040350150_AddPriorityModel.resx">
+      <DependentUpon>201503040350150_AddPriorityModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503072241356_PriorityModelUpdates.resx">
+      <DependentUpon>201503072241356_PriorityModelUpdates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503081929296_AddLastModifiedTimestamp.resx">
+      <DependentUpon>201503081929296_AddLastModifiedTimestamp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503110205411_AddPriceChangeRequestProducts.resx">
+      <DependentUpon>201503110205411_AddPriceChangeRequestProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503110215286_AddProductModelToPriceChangeRequest.resx">
+      <DependentUpon>201503110215286_AddProductModelToPriceChangeRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503110244575_AddWarehouseModel.resx">
+      <DependentUpon>201503110244575_AddWarehouseModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503110253016_FixPlantIssue.resx">
+      <DependentUpon>201503110253016_FixPlantIssue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503110305471_AddPlantToLowInventoryForm.resx">
+      <DependentUpon>201503110305471_AddPlantToLowInventoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503110345204_AddWarehouses_MustInclude.resx">
+      <DependentUpon>201503110345204_AddWarehouses_MustInclude.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503110405420_AddCodeToPOStatus.resx">
+      <DependentUpon>201503110405420_AddCodeToPOStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503110447233_MultiplePOStatuses.resx">
+      <DependentUpon>201503110447233_MultiplePOStatuses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503120247374_AddSkuQuantityModel.resx">
+      <DependentUpon>201503120247374_AddSkuQuantityModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503120302590_AddExpOrderFormToSQ.resx">
+      <DependentUpon>201503120302590_AddExpOrderFormToSQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503120312594_AddTempIdToSkuQuantity.resx">
+      <DependentUpon>201503120312594_AddTempIdToSkuQuantity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503120327477_AddCompletedToSkuQuantity.resx">
+      <DependentUpon>201503120327477_AddCompletedToSkuQuantity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503140400038_UpdateSkuQuantityForDO.resx">
+      <DependentUpon>201503140400038_UpdateSkuQuantityForDO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503140416490_SQFix.resx">
+      <DependentUpon>201503140416490_SQFix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503170222366_FixNewUserSettings.resx">
+      <DependentUpon>201503170222366_FixNewUserSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503191811115_ChatUpdate1.resx">
+      <DependentUpon>201503191811115_ChatUpdate1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503222026520_AddUserStatuses.resx">
+      <DependentUpon>201503222026520_AddUserStatuses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504160251255_AddSkuToPriceChangeRequest.resx">
+      <DependentUpon>201504160251255_AddSkuToPriceChangeRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504160253513_IncreaseCommentSizeTo300.resx">
+      <DependentUpon>201504160253513_IncreaseCommentSizeTo300.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505070216151_IncreaseShipToPhoneSizeTo100.resx">
+      <DependentUpon>201505070216151_IncreaseShipToPhoneSizeTo100.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201507300426005_CannotWaitForContainerModel_Add.resx">
+      <DependentUpon>201507300426005_CannotWaitForContainerModel_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508020349113_InventoryApprovalForm_Add.resx">
+      <DependentUpon>201508020349113_InventoryApprovalForm_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508082038540_SystemUsers_AddInventoryApprovalUser.resx">
+      <DependentUpon>201508082038540_SystemUsers_AddInventoryApprovalUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508082142322_InventoryApproval_ChangeCostToDecimal.resx">
+      <DependentUpon>201508082142322_InventoryApproval_ChangeCostToDecimal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508090404254_Vendor_AddCurrentStock.resx">
+      <DependentUpon>201508090404254_Vendor_AddCurrentStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508160514540_InventoryApproval_AddMaxLengths.resx">
+      <DependentUpon>201508160514540_InventoryApproval_AddMaxLengths.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508170542588_CancelledInventoryApproval.resx">
+      <DependentUpon>201508170542588_CancelledInventoryApproval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508232020102_InventoryNotificationEmailList.resx">
+      <DependentUpon>201508232020102_InventoryNotificationEmailList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508240151059_InventoryApprovalNotifications.resx">
+      <DependentUpon>201508240151059_InventoryApprovalNotifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508242150424_InventoryApprovalComments.resx">
+      <DependentUpon>201508242150424_InventoryApprovalComments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509192216004_UserRequestAssociation_Add.resx">
+      <DependentUpon>201509192216004_UserRequestAssociation_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509192222586_UserAssignmentAssociation_Add.resx">
+      <DependentUpon>201509192222586_UserAssignmentAssociation_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52574</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:61816/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.10\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.10\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.10\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.10\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

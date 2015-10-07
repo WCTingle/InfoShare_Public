@@ -1,0 +1,42 @@
+﻿HTML, BODY, FORM {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  overflow: hidden;
+}
+
+SPAN.Emoticons {
+  background-image: url('/Content/icons/1.gif') !important;
+}
+
+#currentChatters {
+  width: 100%;
+  margin: 3px;
+  padding: 0px;
+}
+
+  #currentChatters > LI {
+    display: block;
+    margin: 0px;
+    padding: 2px;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  #currentChatters > LI:even {
+    background-color: #EEE;
+  }
+
+    #currentChatters > LI:hover {
+      border: 1px solid skyBlue;
+      background-color: aliceblue;
+    }
+
+.messagePanel {
+  overflow: scroll;
+}
+  .rightPanel H3 {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
